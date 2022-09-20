@@ -1,0 +1,57 @@
+package prac;
+
+import java.util.*;
+
+public class prac {
+
+    public static void main(String[] args)
+
+    {
+        double weight, height, age, i, BMR;
+        double w = 13.75, h = 5.003, a = 6.755;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Weight in kg: ");
+        weight = sc.nextDouble();
+        System.out.println(weight);
+
+        double r1 = weight * w;
+        System.out.println("The result is: " + r1);
+
+        Scanner sc2 = new Scanner(System.in);
+        System.out.print("\nHeight in cm: ");
+        height = sc2.nextDouble();
+        System.out.println(height);
+
+        double r2 = height * h;
+        System.out.println("The result is: " + r2);
+
+        Scanner sc3 = new Scanner(System.in);
+        System.out.print("\nAge in years: ");
+        age = sc3.nextDouble();
+        System.out.println(age);
+
+        double r3 = age * a;
+        System.out.println("The result is: " + r3);
+
+        i = +r1 + r2 - r3;
+        System.out.println("\nresult: " + i);
+
+        BMR = 66.47 + i;
+        System.out.println("\nThe BMR is: " + BMR);
+
+        if (BMR < 2500) {
+            System.out.println("\nYour BMR is too low. You need calories");
+        } 
+        else if (BMR > 2500) {
+            System.out.println("\nYour BMR is too high. You need to exercise to lost calories.");
+        } 
+        else if (BMR == 2500) {
+            System.out.println("\nYour BMR is moderate. You're normal.");
+        }
+        else{
+            System.out.println("Invalid input,");
+        }
+    }
+
+}
