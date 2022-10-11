@@ -1,0 +1,74 @@
+package calculator;
+import java.util.*;
+
+public class trycalcuswitch {
+
+
+    public static void main(String[]args){
+
+        
+
+ String answer;
+ int operator;
+ double num1, num2;
+
+do{
+
+ Scanner input = new Scanner (System.in);
+
+ System.out.println("         /// SIMPLE CALCULATOR /// ");
+ System.out.print("    Enter your operator ( + , - , * , / ): ");
+
+ operator = input.next().charAt(0);
+
+ System.out.print("Enter your First number: ");
+ num1 = input.nextDouble();
+
+ System.out.print("Enter your Second number: ");
+ num2 = input.nextDouble();
+
+ switch ( operator ){
+
+    case '+':
+
+    System.out.printf("%.0f + %.0f = %.0f ", num1, num2, (num1 + num2));
+    break;
+
+    case '-':
+
+    System.out.printf("%.0f - %.0f = %.0f ", num1, num2, (num1 - num2));
+    break;
+
+    case '*':
+
+    System.out.printf("%.0f * %.0f = %.0f ", num1, num2, (num1 * num2));
+    break;
+
+    case '/':
+
+    System.out.printf("%.0f / %.0f = %.0f ", num1, num2, (num1 / num2));
+    break;
+
+    default:
+    System.out.print("Error! Invalid Operator.");
+
+
+
+ }
+System.out.print("Do you want to try again? Yes or No: ");
+answer = input.next();
+
+
+}
+while(answer.equalsIgnoreCase("Yes"));
+System.out.println("Thnx & Goodbye!");
+
+
+
+
+
+
+    }
+
+}
+
