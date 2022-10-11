@@ -1,0 +1,75 @@
+package trialcodes;
+import java.util.*;
+
+public class TrialCodes2 {
+     public static void main(String[] args) {
+         
+         Scanner sc = new Scanner(System.in);
+//         boolean g = false; 
+
+         int choice, with, dept, g = 0;
+         int bal=0;
+         
+         
+         do{
+         System.out.print("\nATM Machine\n");
+         System.out.print("\nYour Initial Balance is: " + bal);
+         System.out.println("\n[1] WITHDRAW \n[2] CHECK BALANCE\n[3] DEPOSIT \n[4] EXIT");
+         
+            
+            System.out.println("Enter Your Choice: ");
+            choice =sc.nextInt();
+           switch (choice){
+               
+               case 1:
+             do{
+               System.out.println("Enter the amount to Withdraw: ");
+               with =sc.nextInt();
+               if(bal >= 101){
+               bal = bal - with; 
+               System.out.println("Your Balance is: " + bal);
+               g++;
+               }
+               else{
+               System.out.println("Insufficient Funds");
+               g++;
+               }
+             }while(g<1);     
+               break;    
+                   
+               case 2:
+               System.out.print("Your Balance is: " + bal);
+               break;    
+                   
+               case 3:
+               System.out.print("Enter the amount to Deposit: ");
+               dept =sc.nextInt();
+               bal = bal + dept;
+               System.out.print("Your Balance is: " + dept);
+               break;    
+                   
+               case 4:
+               System.out.print("Thank You for Using Landbank"); 
+               return;
+               
+               default:
+                   System.out.print("Error! Invalid Input.");
+               
+           }
+               
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }while(choice != 4);
+         
+         
+       
+   
+     }
+}
